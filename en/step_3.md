@@ -1,7 +1,18 @@
-## What next?
+## Reflection
 
-If you are following the [PathwayName](https://projects.raspberrypi.org/en/raspberrypi/pathway-name) pathway, you can move on to the [ProjectName](https://projects.raspberrypi.org/en/projects/project-name) project. In this project, you will make a (add description here).
+Congratulations on completing THE QUIZ. We would love to know whether you think this project has helped you develop your digital making skills.
 
-![ProjectName project](images/projectname-project.png)
+--- no-print ---
 
-If you want to have more fun exploring Scratch, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=scratch&curriculum%5B%5D=%201).
+--- quiz ---
+---
+question: Now that you've completed THE QUIZ, how confident do you feel about ANSWERING QUIZZES?
+---
+
+- ( ) Less confident
+- ( ) About the same
+- ( ) More confident
+
+--- /quiz ---
+
+--- /no-print ---
