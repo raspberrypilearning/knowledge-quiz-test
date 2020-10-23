@@ -1,0 +1,11 @@
+title: knowledge-quiz-test
+hero_image: images/banner.png
+description: knowledge-quiz-test description
+version: 4
+listed: false
+copyedit: false
+last_tested: "2020-10-23"
+steps:
+  - title: Introduction
+  - title: Step title
+  - title: What next?
