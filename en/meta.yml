@@ -1,0 +1,17 @@
+hero_image: images/hero-rock-band-large.png
+listed: false
+title: Knowledge Quiz Test
+description: Quizzy Content
+version: 0.1
+last_tested: 2018-10-12
+steps: 
+- title: Introduction
+- title: Test Your Knowledge
+  knowledge_quiz:
+    path: quiz1
+    version: 1
+    questions: 3
+    passing_score: 3
+- title: Reflection
+  quiz: true
+- title: "What next?"
