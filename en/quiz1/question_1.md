@@ -9,7 +9,7 @@ A question may optionally have a 'frontmatter' section with the `legend` paramet
 --- question ---
 
 ---
-legend: Question 1 of 3
+legend: Question 1 of 2
 ---
 
 The bug sprite starts facing upwards.
