@@ -11,8 +11,8 @@ steps:
     knowledge_quiz:
       path: quiz1
       version: 1
-      questions: 3
-      passing_score: 3
+      questions: 2
+      passing_score: 2
   - title: Reflection
     quiz: true
   - title: What next?
