@@ -1,3 +1,9 @@
+--- question ---
+
+---
+legend: Question 2 of 3
+---
+
 What food will the bug reach when these instructions are followed?
 
 ![A bug in a crossword-like maze with various bits of food scattered around](images/quiz/q2.png)
