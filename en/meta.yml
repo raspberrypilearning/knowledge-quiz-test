@@ -10,7 +10,7 @@ steps:
   - title: Test Your Knowledge
     knowledge_quiz:
       path: quiz1
-      version: 1
+      version: 2
       questions: 2
       passing_score: 2
   - title: Reflection
