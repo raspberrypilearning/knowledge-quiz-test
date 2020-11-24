@@ -14,11 +14,11 @@ legend: Question 1 of 2
 
 The bug sprite starts facing upwards.
 
-![Bug facing upwards](images/q1-1.png)
+![Bug facing upwards](images/quiz/q3-1.png)
 
 What code would you add to the bug sprite to draw this shape.
 
-![Path drawn by the bug, with the bug at the end](images/q1-2.png)
+![Path drawn by the bug, with the bug at the end](images/quiz/q3-2.png)
 
 --- choices ---
 
