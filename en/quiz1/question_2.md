@@ -1,44 +1,30 @@
---- question ---
+What food will the bug reach when these instructions are followed?
 
-A dog sprite in Scratch has the following code:
+![A bug in a crossword-like maze with various bits of food scattered around](images/quiz/q2.png)
 
-![A dog with three scratch blocks](./images/q1.svg)
-
-How would you get the dog sprite to change size?
+1. Forward
+2. Forward
+3. Forward
+4. Turn left
+5. Forward
+6. Forward
+7. Turn right
+8. Forward
+9. Forward
+10. Turn right
+11. Forward
+12. Forward
 
 --- choices ---
 
-- ( ) Press the 'space' key
+--- feedback ---
+Follow the instructions one at a time.  Which food item does the bug reach?
+--- /feedback ---
 
-  --- feedback ---
-  What code is attached to the
-  \```blocks3
-  when [space v] key pressed
-  \```
-  event block?
-  --- /feedback ---
-
-- ( ) Make a loud noise
-
-  --- feedback ---
-  What code is attached to the
-  \```blocks3
-  when [loudness v] > 10 :: events hat
-  \```
-  event block?
-  --- /feedback ---
-
-- ( ) Click the green flag
-
-  --- feedback ---
-  What code is attached to the
-  \```blocks3
-  when flag clicked
-  \```
-  event block?
-  --- /feedback ---
-
-- (x) Click on the dog sprite
+- (x) Apple
+- ( ) Banana
+- ( ) Orange
+- ( ) Doughnut
 
 --- /choices ---
 
