@@ -1,24 +1,17 @@
-# Quiz introduction
-
-The quiz can have normal HTML before it, which will just be treated like normal markdown.
-
-Anything inside a `---question---` block will be parsed into a `<form>` representing the quiz question
-
-A question may optionally have a 'frontmatter' section with the `legend` parameter to override the default 'Question' string used in the form's legend tag.
 
 --- question ---
 
 ---
-legend: Question 2 of 2
+legend: Question 3 of 3
 ---
 
 The bug sprite starts facing upwards.
 
-![Bug facing upwards](./img/q3-1.png)
+![Bug facing upwards](images/quiz/q3-1.png)
 
 What code would you add to the bug sprite to draw this shape.
 
-![Path drawn by the bug, with the bug at the end](./img/q3-2.png)
+![Path drawn by the bug, with the bug at the end](images/quiz/q3-2.png)
 
 --- choices ---
 

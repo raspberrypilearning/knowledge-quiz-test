@@ -5,12 +5,12 @@ version: 0.1
 listed: false
 copyedit: false
 last_tested: 2018-10-12
-steps: 
+steps:
   - title: Introduction
   - title: Test Your Knowledge
     knowledge_quiz:
       path: quiz1
-      version: 3
+      version: 4
       questions: 3
       passing_score: 2
   - title: Reflection
