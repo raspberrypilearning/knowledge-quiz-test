@@ -9,7 +9,7 @@ A question may optionally have a 'frontmatter' section with the `legend` paramet
 --- question ---
 
 ---
-legend: Question 1 of 4
+legend: Question 1 of 5
 ---
 
 A dog sprite in Scratch has the following code:

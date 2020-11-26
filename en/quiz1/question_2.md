@@ -1,7 +1,7 @@
 --- question ---
 
 ---
-legend: Question 2 of 4
+legend: Question 2 of 5
 ---
 
 What food will the bug reach when these instructions are followed?

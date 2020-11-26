@@ -2,7 +2,7 @@
 --- question ---
 
 ---
-legend: Question 4 of 4
+legend: Question 4 of 5
 ---
 
 Which of the following pieces of code will show you the message 'Nice biscuits!' if you visit `http://127.0.0.1:5000/biscuits`
