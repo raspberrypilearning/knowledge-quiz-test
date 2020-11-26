@@ -2,7 +2,7 @@
 --- question ---
 
 ---
-legend: Question 3 of 3
+legend: Question 3 of 4
 ---
 
 The bug sprite starts facing upwards.

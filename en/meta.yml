@@ -10,9 +10,9 @@ steps:
   - title: Test Your Knowledge
     knowledge_quiz:
       path: quiz1
-      version: 4
-      questions: 3
-      passing_score: 2
+      version: 5
+      questions: 4
+      passing_score: 3
   - title: Reflection
     quiz: true
   - title: What next?
