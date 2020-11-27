@@ -6,7 +6,7 @@ legend: Question 2 of 5
 
 What food will the bug reach when these instructions are followed?
 
-![A bug in a crossword-like maze with various bits of food scattered around](images/quiz/q2.png)
+![A bug in a crossword-like maze with various bits of food scattered around](images/q2.png)
 
 1. Forward
 2. Forward

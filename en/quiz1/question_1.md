@@ -14,7 +14,7 @@ legend: Question 1 of 5
 
 A dog sprite in Scratch has the following code:
 
-![A dog](images/quiz/q1-1.png) ![Selection of four scratch blocks](images/quiz/q1-2.png)
+![A dog](images/q1-1.png) ![Selection of four scratch blocks](images/q1-2.png)
 
 How would you get the dog sprite to change size?
 
