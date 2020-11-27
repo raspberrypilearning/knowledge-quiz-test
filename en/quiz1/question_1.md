@@ -24,9 +24,9 @@ How would you get the dog sprite to change size?
 
   --- feedback ---
   What code is attached to the
-  \```blocks3
+  ```blocks3
   when [space v] key pressed
-  \```
+  ```
   event block?
   --- /feedback ---
 
@@ -34,9 +34,9 @@ How would you get the dog sprite to change size?
 
   --- feedback ---
   What code is attached to the
-  \```blocks3
+  ```blocks3
   when [loudness v] > 10 :: events hat
-  \```
+  ```
   event block?
   --- /feedback ---
 
@@ -44,9 +44,9 @@ How would you get the dog sprite to change size?
 
   --- feedback ---
   What code is attached to the
-  \```blocks3
+  ```blocks3
   when flag clicked
-  \```
+  ```
   event block?
   --- /feedback ---
 
