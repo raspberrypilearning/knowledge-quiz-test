@@ -4,15 +4,21 @@
 
 Find the project online at [projects.raspberrypi.org/en/projects/knowledge-quiz-test](https://projects.raspberrypi.org/en/projects/knowledge-quiz-test)
 
-## Guidelines
+## Quiz guidelines
 
-The quiz format has been designed to be extremely flexible. Any markdown used in the projects site should work in the quiz.
+The quiz format has been designed to be extremely flexible. Any markdown used in the projects site should work in the quiz. Follow these guidelines to ensure your quiz looks its best.
+
+## Desktop vs Mobile
+
+On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, they will appear in a single column.
+
+<img src="readmeImages/DesktopExample.png" height="300"> <img src="readmeImages/MobileExample.png" height="300">
 
 ### Quiz questions
 
-### Quiz answers
+Add any markdown you like in the quiz question area.
 
-On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, they will appear in a single column.
+### Quiz answers
 
 [Image of desktop vs mobile]
 
@@ -37,6 +43,8 @@ Scratch blocks can be used in question answers, but will look best when you foll
 ### Areas around the quiz
 
 ### Previewing your quiz
+
+Make sure you preview your quiz in desktop and mobile view to check for any formatting issues.
 
 ## Problems?
 
