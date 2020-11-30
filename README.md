@@ -19,12 +19,12 @@ On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, 
 #### Examples for answer content
 
 ##### Text
-![Text answer](readmeImages/TextQuestion.png)
+![Text answer](readmeImages/TextAnswer.png)
 
 Text is the simplest type of answer, and is guaranteed to look good on desktop and mobile.
 
 ##### Scratch blocks
-[Image of a Scratch button]
+![Scratch answer](readmeImages/ScratchAnswer.png)
 
 Scratch blocks can be used in question answers, but will look best when you follow these guidelines
 
