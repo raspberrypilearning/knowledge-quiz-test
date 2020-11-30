@@ -9,12 +9,12 @@ A question may optionally have a 'frontmatter' section with the `legend` paramet
 --- question ---
 
 ---
-legend: Question 1 of 3
+legend: Question 1 of 5
 ---
 
 A dog sprite in Scratch has the following code:
 
-![A dog](images/quiz/q1-1.png) ![Selection of four scratch blocks](images/quiz/q1-2.png)
+![A dog](images/q1-1.png) ![Selection of four scratch blocks](images/q1-2.png)
 
 How would you get the dog sprite to change size?
 
@@ -24,9 +24,9 @@ How would you get the dog sprite to change size?
 
   --- feedback ---
   What code is attached to the
-  \```blocks3
+  ```blocks3
   when [space v] key pressed
-  \```
+  ```
   event block?
   --- /feedback ---
 
@@ -34,9 +34,9 @@ How would you get the dog sprite to change size?
 
   --- feedback ---
   What code is attached to the
-  \```blocks3
+  ```blocks3
   when [loudness v] > 10 :: events hat
-  \```
+  ```
   event block?
   --- /feedback ---
 
@@ -44,9 +44,9 @@ How would you get the dog sprite to change size?
 
   --- feedback ---
   What code is attached to the
-  \```blocks3
+  ```blocks3
   when flag clicked
-  \```
+  ```
   event block?
   --- /feedback ---
 

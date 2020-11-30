@@ -1,18 +1,18 @@
-title: Knowledge Quiz Test
+title: Prawf Cwis Gwybodaeth
 hero_image: images/banner.png
-description: Quizzy Content
+description: Cynnwys cwislyd
 version: 0.1
 listed: false
 copyedit: false
 last_tested: 2018-10-12
 steps:
-  - title: Introduction
-  - title: Test Your Knowledge
+  - title: Cyflwyniad
+  - title: Profwch eich gwybodaeth
     knowledge_quiz:
       path: quiz1
       version: 6
       questions: 5
       passing_score: 4
-  - title: Reflection
+  - title: Myfyrio
     quiz: true
-  - title: What next?
+  - title: Beth nesaf?
