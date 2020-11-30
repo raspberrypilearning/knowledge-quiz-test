@@ -16,22 +16,22 @@ On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, 
 
 [Image of desktop vs mobile]
 
-#### Examples for answer content
-
-##### Text
+#### Text
 ![Text answer](readmeImages/TextAnswer.png)
 
 Text is the simplest type of answer, and is guaranteed to look good on desktop and mobile.
 
-##### Scratch blocks
+#### Scratch blocks
 ![Scratch answer](readmeImages/ScratchAnswer.png)
 
 Scratch blocks can be used in question answers, but will look best when you follow these guidelines
 
-- Scratch blocks which are too tall will cause scrolling issues meaning the user cannot compare the answer to the question.
-- Scratch blocks which are too wide will cause the quiz area to scroll horizontally, meaning it will be more difficult for the user to read the answer options.
+- Don't make your Scratch blocks too tall.
+  - This makes it harder for the user to compare the answer to the question, as they will have to scroll down to see the answers.
+- Don't make your Scratch blocks too wide.
+  - This makes it harder to read the answers as the user will have to scroll horizontally.
 
-##### Other
+#### Other
 [Images of other buttons]
 
 ### Areas around the quiz
