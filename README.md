@@ -14,11 +14,11 @@ On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, 
 
 <img src="readmeImages/DesktopExamplePython.png" height="300"> <img src="readmeImages/MobileExamplePython.png" height="300">
 
-### Quiz questions
+## Quiz questions
 
 Add any markdown you like in the quiz question area.
 
-### Quiz answers
+## Quiz answers
 
 #### Text
 ![Text answer](readmeImages/TextAnswer.png)
@@ -38,9 +38,9 @@ Scratch blocks can be used in question answers, but will look best when you foll
 #### Other
 [Images of other buttons]
 
-### Areas around the quiz
+## Areas around the quiz
 
-### Previewing your quiz
+## Previewing your quiz
 
 Make sure you preview your quiz in desktop and mobile view to check for any formatting issues.
 
