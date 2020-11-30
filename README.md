@@ -19,7 +19,7 @@ On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, 
 #### Examples for answer content
 
 ##### Text
-[Image of the text button]
+![Text answer](readmeImages/TextQuestion.png)
 
 Text is the simplest type of answer, and is guaranteed to look good on desktop and mobile.
 
