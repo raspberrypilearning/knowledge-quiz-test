@@ -14,7 +14,7 @@ The main takeaway? **Try to minimse scrolling in your quiz.**
 
 Add any markdown you like in the quiz question area. Videos, gifs, Scratch blocks and more should all work in this area.
 
-Try to keep the question relatively short vertically - in user testing young people struggled when they had to scroll between the question and the answers.
+Try to keep the question relatively short vertically - **in user testing young people struggled when they had to scroll between the question and the answers.**
 
 ## Quiz answer formats
 
@@ -28,9 +28,9 @@ Text is the simplest type of answer, and is guaranteed to look good on desktop a
 
 Scratch blocks can be used in question answers, but will look best when you follow these guidelines
 
-- Don't make your Scratch blocks too tall.
+- **Don't make your Scratch blocks too tall.**
   - This makes it harder for the user to compare the answer to the question, as they will have to scroll down to see the answers.
-- Don't make your Scratch blocks too wide.
+- **Don't make your Scratch blocks too wide.**
   - This makes it harder to read the answers as the user will have to scroll horizontally.
 
 #### Other
