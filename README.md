@@ -1,12 +1,12 @@
 # knowledge-quiz-test
 
-![knowledge-quiz-test](banner.png)
-
 Find the project online at [projects.raspberrypi.org/en/projects/knowledge-quiz-test](https://projects.raspberrypi.org/en/projects/knowledge-quiz-test)
 
 ## Quiz guidelines
 
 The quiz format has been designed to be extremely flexible. Any markdown used in the projects site should work in the quiz. Follow these guidelines to ensure your quiz looks its best.
+
+<img src="readmeImages/QuizExample.png" height="300">
 
 ## Desktop vs Mobile
 
