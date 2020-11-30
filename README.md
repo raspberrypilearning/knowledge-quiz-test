@@ -20,8 +20,6 @@ Add any markdown you like in the quiz question area.
 
 ### Quiz answers
 
-[Image of desktop vs mobile]
-
 #### Text
 ![Text answer](readmeImages/TextAnswer.png)
 
