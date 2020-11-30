@@ -6,6 +6,8 @@ Find the project online at [projects.raspberrypi.org/en/projects/knowledge-quiz-
 
 The quiz format has been designed to be extremely flexible. Any markdown used in the projects site should work in the quiz. Follow these guidelines to ensure your quiz looks its best.
 
+The main takeaway? **Try to minimse scrolling in your quiz.**
+
 <img src="readmeImages/QuizExample.png" height="300">
 
 ## Quiz questions
