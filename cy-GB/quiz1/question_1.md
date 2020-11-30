@@ -25,7 +25,7 @@ Sut fyddech chi'n cael y corlun cŵn i newid maint?
   --- feedback ---
   Pa god sydd ynghlwm wrth y
    ```blocks3
-   pan bwysodd [gofod v] allwedd
+   pan fo bysell [gofod v] wedi ei wasgu
    ```
    bloc digwyddiadau?
    --- /feedback ---
@@ -35,7 +35,7 @@ Sut fyddech chi'n cael y corlun cŵn i newid maint?
    --- feedback ---
    Pa god sydd ynghlwm wrth y
    ```blocks3
-   pan [cryfder v]> 10 :: het digwyddiadau
+   pan [cryfder v] > (10)
    ```
    bloc digwyddiadau?
    --- /feedback ---
@@ -45,7 +45,7 @@ Sut fyddech chi'n cael y corlun cŵn i newid maint?
    --- feedback ---
    Pa god sydd ynghlwm wrth y
    ```blocks3
-   pan gliciwch y faner
+   pan fo'r flag werdd yn cael ei glicio
    ```
    bloc digwyddiadau?
    --- /feedback ---

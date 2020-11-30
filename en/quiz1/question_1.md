@@ -35,7 +35,7 @@ How would you get the dog sprite to change size?
   --- feedback ---
   What code is attached to the
   ```blocks3
-  when [loudness v] > 10 :: events hat
+  when [loudness v] > (10)
   ```
   event block?
   --- /feedback ---
