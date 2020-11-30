@@ -8,8 +8,6 @@ The quiz format has been designed to be extremely flexible. Any markdown used in
 
 <img src="readmeImages/QuizExample.png" height="300">
 
-<img src="readmeImages/DesktopExamplePython.png" height="300"> <img src="readmeImages/MobileExamplePython.png" height="300">
-
 ## Quiz questions
 
 Add any markdown you like in the quiz question area. Videos, gifs, Scratch blocks and more should all work in this area.
@@ -39,6 +37,8 @@ Scratch blocks can be used in question answers, but will look best when you foll
 ## Desktop vs Mobile
 
 On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, they will appear in a single column.
+
+<img src="readmeImages/DesktopExamplePython.png" height="300"> <img src="readmeImages/MobileExamplePython.png" height="300">
 
 ## Previewing your quiz
 
