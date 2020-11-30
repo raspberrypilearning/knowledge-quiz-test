@@ -12,9 +12,7 @@ The quiz format has been designed to be extremely flexible. Any markdown used in
 
 On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, they will appear in a single column.
 
-//REDO THESE IMAGES SO ITS NOT SCRATCH BLOCKS AS IMAGES
-
-<img src="readmeImages/DesktopExample.png" height="300"> <img src="readmeImages/MobileExample.png" height="300">
+<img src="readmeImages/DesktopExamplePython.png" height="300"> <img src="readmeImages/MobileExamplePython.png" height="300">
 
 ### Quiz questions
 
