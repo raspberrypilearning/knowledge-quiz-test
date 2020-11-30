@@ -20,7 +20,7 @@ Add any markdown you like in the quiz question area. Videos, gifs, Scratch block
 
 Try to keep the question relatively short vertically - in user testing young people struggled when they had to scroll between the question and the answers.
 
-## Quiz answers
+## Quiz answer formats
 
 #### Text
 ![Text answer](readmeImages/TextAnswer.png)
