@@ -35,7 +35,11 @@ When a user answers a question, they will be told if their answer is right or wr
 ## Desktop vs Mobile
 On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, they will appear in a single column.
 
-<img src="readmeImages/DesktopExamplePython.png" height="300"> <img src="readmeImages/MobileExamplePython.png" height="300">
+**Desktop:**
+<img src="readmeImages/DesktopExamplePython.png" height="400">
+
+**Mobile:**
+<img src="readmeImages/MobileExamplePython.png" height="400">
 
 Make sure you preview your quiz in desktop and mobile view to check for any formatting issues.
 
