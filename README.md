@@ -14,8 +14,6 @@ The main takeaway? **Try to minimse scrolling in your quiz.**
 
 Add any markdown you like in the quiz question area. Videos, gifs, Scratch blocks and more should all work in this area.
 
-Try to keep the question relatively short vertically - **in user testing young people struggled when they had to scroll between the question and the answers.**
-
 ## Quiz answer formats
 
 #### Scratch blocks
