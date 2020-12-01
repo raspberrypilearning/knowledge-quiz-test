@@ -6,7 +6,7 @@ Find the live quiz examples at [projects.raspberrypi.org/en/projects/knowledge-q
 ## Quiz design guidelines
 The quiz format has been designed to be extremely flexible. Any markdown used in the projects site should work in the quiz. Follow these guidelines to ensure your quiz looks its best.
 
-The main takeaway? **Try to minimse scrolling in your quiz.**
+The areas of the quiz are shown in the diagram below.
 
 <img src="readmeImages/QuizAreas.png" height="400">
 
