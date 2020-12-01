@@ -10,14 +10,14 @@ The quiz format has been designed to be extremely flexible. Any markdown used in
 
 The areas of the quiz are shown in the diagram below.
 
-<img src="readmeImages/QuizAreas.png" height="400">
+<img src="images/QuizAreas.png" height="400">
 
 ## Quiz questions
 Add any markdown you like in the quiz question area. Videos, gifs, Scratch blocks and more should all work in this area.
 
 ## Quiz answer formats
 ### Scratch blocks
-![Scratch answer](readmeImages/ScratchAnswer.png)
+![Scratch answer](images/ScratchAnswer.png)
 
 Scratch blocks can be used in question answers, but will look best when you follow these guidelines
 
@@ -27,7 +27,7 @@ Scratch blocks can be used in question answers, but will look best when you foll
   - Wide blocks make the quiz area scroll horizontally, making it hard for users to read the answers.
   
 ### Other blocks
-![Text answer](readmeImages/TextAnswer.png)
+![Text answer](images/TextAnswer.png)
 
 Text and python have been tested and work in question answers. Any markdown should work in an answer, let us know if you have tried something and the formatting looks strange.
 
@@ -39,11 +39,11 @@ On desktop, answers to the quiz questions will appear in a 2x2 grid. On mobile, 
 
 **Desktop:**
 
-<img src="readmeImages/DesktopExamplePython.png" height="400">
+<img src="images/DesktopExamplePython.png" height="400">
 
 **Mobile:**
 
-<img src="readmeImages/MobileExamplePython.png" height="400">
+<img src="images/MobileExamplePython.png" height="400">
 
 Make sure you preview your quiz in desktop and mobile view to check for any formatting issues.
 
