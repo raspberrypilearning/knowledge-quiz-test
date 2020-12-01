@@ -3,6 +3,8 @@
 ## Live quiz examples
 Find the live quiz examples at [staging-link-will-go-here](https://)
 
+See how these quiz questions were constructed by checking knowledge-quiz-test/en/quiz1/ in this project.
+
 ## Quiz design guidelines
 The quiz format has been designed to be extremely flexible. Any markdown used in the projects site should work in the quiz. Follow these guidelines to ensure your quiz looks its best.
 
