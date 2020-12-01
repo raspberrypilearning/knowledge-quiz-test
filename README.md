@@ -8,7 +8,7 @@ The quiz format has been designed to be extremely flexible. Any markdown used in
 
 The main takeaway? **Try to minimse scrolling in your quiz.**
 
-<img src="readmeImages/QuizExample.png" height="300">
+<img src="readmeImages/QuizAreas.png" height="400">
 
 ## Quiz questions
 Add any markdown you like in the quiz question area. Videos, gifs, Scratch blocks and more should all work in this area.
