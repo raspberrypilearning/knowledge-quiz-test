@@ -18,23 +18,20 @@ Try to keep the question relatively short vertically - **in user testing young p
 
 ## Quiz answer formats
 
-#### Text
-![Text answer](readmeImages/TextAnswer.png)
-
-Text is the simplest type of answer, and is guaranteed to look good on desktop and mobile.
-
 #### Scratch blocks
 ![Scratch answer](readmeImages/ScratchAnswer.png)
 
 Scratch blocks can be used in question answers, but will look best when you follow these guidelines
 
-- **Don't make your Scratch blocks too tall.**
-  - This makes it harder for the user to compare the answer to the question, as they will have to scroll down to see the answers.
-- **Don't make your Scratch blocks too wide.**
-  - This makes it harder to read the answers as the user will have to scroll horizontally.
+- **Keep you Scratch blocks short.**
+  - Tall blocks mean the user has to scroll up and down between the answers and the question.
+- **Keep your Scratch blocks narrow.**
+  - Wide blocks make the quiz area scroll horizontally, making it hard for users to read the answers.
+  
+#### Other blocks
+![Text answer](readmeImages/TextAnswer.png)
 
-#### Other
-[Images of other buttons]
+Text and python have been tested and work in question answers. Any markdown should work in an answer, let us know if you have tried something and the formatting looks strange.
 
 ## Desktop vs Mobile
 
