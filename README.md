@@ -1,7 +1,7 @@
 # knowledge-quiz-test
 
 ## Live quiz examples
-Find the live quiz examples at [staging-link-will-go-here](https://)
+Find the live quiz examples at [https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test/1](https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test/1)
 
 See how these quiz questions were constructed by checking **knowledge-quiz-test/en/quiz1/** in this project.
 
