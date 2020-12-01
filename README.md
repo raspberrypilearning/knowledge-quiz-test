@@ -3,7 +3,7 @@
 ## Live quiz examples
 Find the live quiz examples at [https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test/1](https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test/1)
 
-See how these quiz questions were constructed by checking the files in !(en/quiz1/)[en/quiz1/] in this project.
+See how these quiz questions were constructed by checking the files in ![en/quiz1/](en/quiz1/) in this project.
 
 ## Quiz design guidelines
 The quiz format has been designed to be extremely flexible. Any markdown used in the projects site should work in the quiz. Follow these guidelines to ensure your quiz looks its best.
