@@ -57,4 +57,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
  See [LICENCE.md](LICENCE.md)
 
 ## Note
-Find the project online at [projects.raspberrypi.org/en/projects/knowledge-quiz-test](https://projects.raspberrypi.org/en/projects/knowledge-quiz-test)
+Find the project online at [https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test](https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test)
