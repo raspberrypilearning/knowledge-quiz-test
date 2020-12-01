@@ -1,7 +1,7 @@
 # knowledge-quiz-test
 
 ## Live quiz examples
-Find the live quiz examples at [projects.raspberrypi.org/en/projects/knowledge-quiz-test](https://projects.raspberrypi.org/en/projects/knowledge-quiz-test)
+Find the live quiz examples at [staging-link-will-go-here](https://)
 
 ## Quiz design guidelines
 The quiz format has been designed to be extremely flexible. Any markdown used in the projects site should work in the quiz. Follow these guidelines to ensure your quiz looks its best.
