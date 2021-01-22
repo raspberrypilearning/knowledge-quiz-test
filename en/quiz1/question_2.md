@@ -23,10 +23,6 @@ What food will the bug reach when these instructions are followed?
 
 --- choices ---
 
---- feedback ---
-Follow the instructions one at a time.  Which food item does the bug reach?
---- /feedback ---
-
 - (x) Apple
 - ( ) Banana
 - ( ) Orange
