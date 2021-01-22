@@ -58,7 +58,7 @@ What code would you add to the bug sprite to draw this shape.
   ```
 
   --- feedback ---
-  Well done!
+  Well done, that was great!
   --- /feedback ---
 
 - ( )
