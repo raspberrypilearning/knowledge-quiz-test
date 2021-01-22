@@ -57,6 +57,10 @@ What code would you add to the bug sprite to draw this shape.
   move (100) steps
   ```
 
+  --- feedback ---
+  Well done!
+  --- /feedback ---
+
 - ( )
   ```blocks3
   when flag clicked
