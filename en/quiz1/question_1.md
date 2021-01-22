@@ -67,7 +67,7 @@ How would you get the dog sprite to change size?
 - (x) Click on the dog sprite
 
   --- feedback ---
-  Well done!
+  Yup, you got it right!
   --- /feedback ---
 
 --- /choices ---
