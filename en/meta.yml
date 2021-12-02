@@ -1,3 +1,4 @@
+---
 title: Knowledge Quiz Test
 hero_image: images/banner.png
 description: Quizzy Content
@@ -6,13 +7,15 @@ listed: false
 copyedit: false
 last_tested: 2018-10-12
 steps:
-  - title: Introduction
-  - title: Test Your Knowledge
-    knowledge_quiz:
-      path: quiz1
-      version: 6
-      questions: 5
-      passing_score: 4
-  - title: Reflection
-    quiz: true
-  - title: What next?
+- title: Introduction
+- title: Test Your Knowledge
+  knowledge_quiz:
+    path: quiz1
+    version: 6
+    questions: 5
+    passing_score: 4
+  completion: engaged
+- title: Reflection
+  quiz: true
+  completion: internal
+- title: What next?
