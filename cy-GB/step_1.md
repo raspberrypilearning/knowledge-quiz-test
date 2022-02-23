@@ -32,7 +32,7 @@ title: Beth fydd ei angen arnoch chi
 
 ### Dadlwythiadau
 
-+ Dadlwythwch y prosiect [ffeil cychwynnol](http://rpf.io/p/cy/projectName-go){:target="_blank"} os yw'n gweithio all-lein
++ Dadlwythwch y prosiect [ffeil cychwynnol](https://rpf.io/p/cy/projectName-go){:target="_blank"} os yw'n gweithio all-lein
 
 --- /collapse ---
 
@@ -52,7 +52,7 @@ title: Beth fyddwch chi'n ei ddysgu
 title: Gwybodaeth ychwanegol i addysgwyr
 ---
 
-Gallwch chi lawrlwytho'r prosiect gorffenedig [yma] (http://rpf.io/p/cy/projectName-get) {: target = "_blank"}.
+Gallwch chi lawrlwytho'r prosiect gorffenedig [yma] (https://rpf.io/p/cy/projectName-get) {: target = "_blank"}.
 
 Os oes angen i chi argraffu'r prosiect hwn, defnyddiwch y [fersiwn sy'n gyfeillgar i'r argraffydd] (https://projects.raspberrypi.org/cy/projects/projectName/print) {: target = "_blank"}.
 
