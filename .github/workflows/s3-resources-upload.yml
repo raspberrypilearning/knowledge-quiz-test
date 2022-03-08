@@ -4,14 +4,14 @@ on:
     branches:
       - actions-test
 jobs:
-  Dump-github-context:
-    run: echo "$GITHUB_CONTEXT"
-    shell: bash
-    env:
-      GITHUB_CONTEXT: ${{ toJson(github) }}
   Sync-resources-to-S3:
     runs-on: ubuntu-latest
     steps:
+      - name: Dump-github-context
+        run: echo "$GITHUB_CONTEXT"
+        shell: bash
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
       - uses: keithweaver/aws-s3-github-action@v1.0.0
         with:
           command: cp
