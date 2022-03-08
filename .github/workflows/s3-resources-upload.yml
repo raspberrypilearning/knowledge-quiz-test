@@ -4,7 +4,7 @@ on:
     branches:
       - actions-test
 jobs:
-  Sync-resources-to-S3:
+  Sync-image-to-S3:
     runs-on: ubuntu-latest
     steps:
       # - name: Dump-github-context
