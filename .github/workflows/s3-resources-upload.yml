@@ -7,16 +7,17 @@ jobs:
   Sync-resources-to-S3:
     runs-on: ubuntu-latest
     steps:
-      - name: Dump-github-context
-        run: echo "$GITHUB_CONTEXT"
-        shell: bash
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+      # - name: Dump-github-context
+      #   run: echo "$GITHUB_CONTEXT"
+      #   shell: bash
+      #   env:
+      #     GITHUB_CONTEXT: ${{ toJson(github) }}
       - uses: keithweaver/aws-s3-github-action@v1.0.0
         with:
           command: cp
           source: ./en/images/q1-1.png
-          destination: s3://learning-resources-dev-staging/projects/knowledge-quiz-test/${{ env.GITHUB_SHA }}/en/images/q1-1.png
+          # ${{ github.event.repository.name }} is unavailable in scheduled actions!
+          destination: s3://learning-resources-dev-staging/projects/${{ github.event.repository.name }}/${{ GITHUB_SHA }}/en/images/q1-1.png
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: eu-west-2
