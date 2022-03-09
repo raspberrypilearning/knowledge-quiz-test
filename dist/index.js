@@ -3786,6 +3786,139 @@ exports.request = request;
 
 /***/ }),
 
+/***/ 6111:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Options = exports.Aws = void 0;
+const child_process = __importStar(__nccwpck_require__(2081));
+const nodeify_ts_1 = __importDefault(__nccwpck_require__(5694));
+const execFile = child_process.execFile;
+const exec = child_process.exec;
+const extractResult = (result) => {
+    try {
+        result.object = JSON.parse(result.raw);
+    }
+    catch (e) {
+        result.object = e;
+    }
+    return result;
+};
+class Aws {
+    constructor(options = {
+        accessKey: undefined,
+        currentWorkingDirectory: undefined,
+        secretKey: undefined,
+        cliPath: 'aws'
+    }) {
+        this.options = options;
+    }
+    command(command, callback) {
+        const execCommand = `${this.options.cliPath} ${command}`;
+        const env_vars = ('HOME PATH AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY ' +
+            'AWS_SESSION_TOKEN AWS_DEFAULT_REGION ' +
+            'AWS_PROFILE AWS_DEFAULT_PROFILE AWS_CONFIG_FILE').split(' ');
+        const env = env_vars.reduce((result, value) => {
+            if (process.env[value]) {
+                result[value] = process.env[value];
+            }
+            return result;
+        }, {});
+        env['DEBUG'] = '';
+        if (this.options.accessKey) {
+            env['AWS_ACCESS_KEY_ID'] = this.options.accessKey;
+        }
+        if (this.options.secretKey) {
+            env['AWS_SECRET_ACCESS_KEY'] = this.options.secretKey;
+        }
+        if (this.options.sessionToken) {
+            env['AWS_SESSION_TOKEN'] = this.options.sessionToken;
+        }
+        const execOptions = {
+            cwd: this.options.currentWorkingDirectory,
+            env: env,
+            maxBuffer: 200 * 1024 * 1024,
+        };
+        const promise = Promise.resolve().then(() => {
+            return new Promise((resolve, reject) => {
+                if (command.indexOf('"') < 0) {
+                    let cmd = [...command.split(' ')];
+                    cmd = cmd.filter(v => v.length > 0);
+                    //console.log('execFile');
+                    execFile(this.options.cliPath, cmd, execOptions, (error, stdout, stderr) => {
+                        if (error) {
+                            const message = `error: '${error}' stdout = '${stdout}' stderr = '${stderr}'`;
+                            //console.error(message);
+                            reject(message);
+                        }
+                        //console.log(`stdout: ${stdout}`);
+                        resolve({ stderr: stderr, stdout: stdout });
+                    });
+                }
+                else {
+                    //console.log('exec');
+                    exec(execCommand, execOptions, (error, stdout, stderr) => {
+                        if (error) {
+                            const message = `error: '${error}' stdout = '${stdout}' stderr = '${stderr}'`;
+                            //console.error(message);
+                            reject(message);
+                        }
+                        //console.log(`stdout: ${stdout}`);
+                        resolve({ stderr: stderr, stdout: stdout });
+                    });
+                }
+            });
+        }).then((data) => {
+            const result = {
+                command: execCommand,
+                error: data.stderr,
+                object: null,
+                raw: data.stdout,
+            };
+            return extractResult(result);
+        });
+        return nodeify_ts_1.default(promise, callback);
+    }
+}
+exports.Aws = Aws;
+class Options {
+    constructor(accessKey, secretKey, sessionToken, currentWorkingDirectory, cliPath = 'aws') {
+        this.accessKey = accessKey;
+        this.secretKey = secretKey;
+        this.sessionToken = sessionToken;
+        this.currentWorkingDirectory = currentWorkingDirectory;
+        this.cliPath = cliPath;
+    }
+}
+exports.Options = Options;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
 /***/ 3682:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
@@ -5738,6 +5871,27 @@ exports.Headers = Headers;
 exports.Request = Request;
 exports.Response = Response;
 exports.FetchError = FetchError;
+
+
+/***/ }),
+
+/***/ 5694:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+function default_1(promise, callback) {
+    if (typeof callback !== 'function') {
+        return promise;
+    }
+    return promise.then((result) => {
+        callback(null, result);
+    }, (error) => {
+        callback(error || new Error, null);
+    });
+}
+exports["default"] = default_1;
 
 
 /***/ }),
@@ -8315,6 +8469,14 @@ module.exports = require("assert");
 
 /***/ }),
 
+/***/ 2081:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("child_process");
+
+/***/ }),
+
 /***/ 2361:
 /***/ ((module) => {
 
@@ -8376,14 +8538,6 @@ module.exports = require("os");
 
 "use strict";
 module.exports = require("path");
-
-/***/ }),
-
-/***/ 7282:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("process");
 
 /***/ }),
 
@@ -8485,7 +8639,8 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const { readdir } = __nccwpck_require__(3292);
-const { cwd } = __nccwpck_require__(7282);
+// const { cwd } = require("process");
+const awsCli = __nccwpck_require__(6111);
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 
@@ -8505,33 +8660,42 @@ const listLocaleMediaFiles = async (locale) => {
   for (let i = 0; i < mediaDirectories.length; i++) {
     const files = await readdir(`./${locale}/${mediaDirectories[i]}`);
     files.forEach((file) => {
-      mediaFiles.push(`./${locale}/${mediaDirectories[i]}/${file}`);
+      mediaFiles.push(`${locale}/${mediaDirectories[i]}/${file}`);
     });
   }
   return mediaFiles;
 };
 
-const uploadLocaleFiles = (files) => {
+const uploadLocaleFiles = async (files) => {
+  const aws = new awsCli.Aws();
   const {
     context: {
-      payload: { after: commit },
+      payload: {
+        after: commit,
+        repository: { name: repositoryName },
+      },
     },
   } = github;
+
+  // `aws s3 cp ${FILE} s3://${path}/ \
+  // --region ${process.env.AWS_REGION} $*`
+  const path = `${process.env.AWS_BUCKET}/projects/${repositoryName}/${commit}/`;
+  const file = "./en/images/q1-1.png";
+
+  const command = `s3 cp ./${file} s3://${path}/${file}`;
+  const result = await aws.command(command);
+  console.log("aws copy result = ", result);
 };
 
 async function main() {
   try {
-    // Get the JSON webhook payload for the event that triggered the workflow
-    // const payload = JSON.stringify(github.context.payload, undefined, 2);
-    // console.log(`The event payload: ${payload}`);
-
-    console.log(`Current directory: ${cwd()}`);
-    const localeDirectories = await listLocaleDirectories();
     const filesToUpload = [];
-    for (let i = 0; i < localeDirectories.length; i++) {
-      const mediaFiles = await listLocaleMediaFiles(localeDirectories[i]);
-      mediaFiles.forEach((file) => filesToUpload.push(file));
-    }
+    // const localeDirectories = await listLocaleDirectories();
+    // for (let i = 0; i < localeDirectories.length; i++) {
+    //   const mediaFiles = await listLocaleMediaFiles(localeDirectories[i]);
+    //   mediaFiles.forEach((file) => filesToUpload.push(file));
+    // }
+    await uploadLocaleFiles();
     core.setOutput("directories", filesToUpload);
   } catch (error) {
     core.setFailed(error.message);

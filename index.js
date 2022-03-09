@@ -1,5 +1,6 @@
 const { readdir } = require("fs/promises");
-const { cwd } = require("process");
+// const { cwd } = require("process");
+const awsCli = require("aws-cli-js");
 const core = require("@actions/core");
 const github = require("@actions/github");
 
@@ -19,33 +20,42 @@ const listLocaleMediaFiles = async (locale) => {
   for (let i = 0; i < mediaDirectories.length; i++) {
     const files = await readdir(`./${locale}/${mediaDirectories[i]}`);
     files.forEach((file) => {
-      mediaFiles.push(`./${locale}/${mediaDirectories[i]}/${file}`);
+      mediaFiles.push(`${locale}/${mediaDirectories[i]}/${file}`);
     });
   }
   return mediaFiles;
 };
 
-const uploadLocaleFiles = (files) => {
+const uploadLocaleFiles = async (files) => {
+  const aws = new awsCli.Aws();
   const {
     context: {
-      payload: { after: commit },
+      payload: {
+        after: commit,
+        repository: { name: repositoryName },
+      },
     },
   } = github;
+
+  // `aws s3 cp ${FILE} s3://${path}/ \
+  // --region ${process.env.AWS_REGION} $*`
+  const path = `${process.env.AWS_BUCKET}/projects/${repositoryName}/${commit}/`;
+  const file = "./en/images/q1-1.png";
+
+  const command = `s3 cp ./${file} s3://${path}/${file}`;
+  const result = await aws.command(command);
+  console.log("aws copy result = ", result);
 };
 
 async function main() {
   try {
-    // Get the JSON webhook payload for the event that triggered the workflow
-    // const payload = JSON.stringify(github.context.payload, undefined, 2);
-    // console.log(`The event payload: ${payload}`);
-
-    console.log(`Current directory: ${cwd()}`);
-    const localeDirectories = await listLocaleDirectories();
     const filesToUpload = [];
-    for (let i = 0; i < localeDirectories.length; i++) {
-      const mediaFiles = await listLocaleMediaFiles(localeDirectories[i]);
-      mediaFiles.forEach((file) => filesToUpload.push(file));
-    }
+    // const localeDirectories = await listLocaleDirectories();
+    // for (let i = 0; i < localeDirectories.length; i++) {
+    //   const mediaFiles = await listLocaleMediaFiles(localeDirectories[i]);
+    //   mediaFiles.forEach((file) => filesToUpload.push(file));
+    // }
+    await uploadLocaleFiles();
     core.setOutput("directories", filesToUpload);
   } catch (error) {
     core.setFailed(error.message);

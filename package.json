@@ -19,7 +19,8 @@
   "homepage": "https://github.com/raspberrypilearning/knowledge-quiz-test#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "@actions/github": "^5.0.0"
+    "@actions/github": "^5.0.0",
+    "aws-cli-js": "^2.2.3"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.33.3"
