@@ -59,6 +59,7 @@ async function main() {
     await uploadLocaleFiles();
     core.setOutput("directories", filesToUpload);
   } catch (error) {
+    console.log("error ", error);
     core.setFailed(error.message);
   }
 }
