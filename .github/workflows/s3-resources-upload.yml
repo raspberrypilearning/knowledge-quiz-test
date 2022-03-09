@@ -6,6 +6,9 @@ on:
 jobs:
   Sync-image-to-S3:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        directory: [images, resources, solutions]
     steps:
       # - name: Dump-github-context
       #   run: echo "$GITHUB_CONTEXT"
@@ -16,9 +19,9 @@ jobs:
       - uses: keithweaver/aws-s3-github-action@v1.0.0
         with:
           command: cp
-          source: ./en/images/
+          source: ./en/${{ matrix.directory }}/
           # ${{ github.event.repository.name }} is unavailable in scheduled actions!
-          destination: s3://learning-resources-dev-staging/projects/${{ github.event.repository.name }}/${{ github.sha }}/en/images/
+          destination: s3://learning-resources-dev-staging/projects/${{ github.event.repository.name }}/${{ github.sha }}/en/${{ matrix.directory }}/
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: eu-west-2
