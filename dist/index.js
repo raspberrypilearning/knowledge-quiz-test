@@ -8680,7 +8680,7 @@ const uploadLocaleFiles = async (files) => {
   // `aws s3 cp ${FILE} s3://${path}/ \
   // --region ${process.env.AWS_REGION} $*`
   const path = `${process.env.AWS_BUCKET}/projects/${repositoryName}/${commit}/`;
-  const file = "./en/images/q1-1.png";
+  const file = "en/images/q1-1.png";
 
   const command = `s3 cp ./${file} s3://${path}/${file}`;
   console.log("aws copy ", path, file, command);
