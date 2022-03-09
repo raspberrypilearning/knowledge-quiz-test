@@ -1,0 +1,13 @@
+name: "List Content Directories"
+description: "return a filtered list of directories in the checked out repository"
+inputs:
+  filter: # id of input
+    description: "which directories to exclude, a comma separated list"
+    required: false
+    default: ""
+outputs:
+  directories: # id of output
+    description: "a list of directories"
+runs:
+  using: "node16"
+  main: "index.js"

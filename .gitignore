@@ -9,3 +9,6 @@ env/
 
 ### MacOS ###
 .DS_STORE
+
+
+node_modules
