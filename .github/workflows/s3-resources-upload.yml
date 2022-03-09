@@ -11,35 +11,15 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: eu-west-2
       AWS_BUCKET: learning-resources-dev-staging
-
-    # strategy:
-    #   matrix:
-    #     directory: [images, resources, solutions]
     steps:
-      # - name: Dump-github-context
-      #   run: echo "$GITHUB_CONTEXT"
-      #   shell: bash
-      #   env:
-      #     GITHUB_CONTEXT: ${{ toJson(github) }}
       - name: Setup AWS CLI
         uses: unfor19/install-aws-cli-action@v1
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: List directories
+      - name: Upload content directories
         uses: ./
-        id: list_directories
+        id: upload_directories
         with:
           filter: code,data,images,dist,.github,.git
       - name: Show the directories
-        run: echo "The locale directories are ${{ steps.list_directories.outputs.directories }}"
-      # - name: Upload To S3
-      #   uses: keithweaver/aws-s3-github-action@v1.0.0
-      #   with:
-      #     command: cp
-      #     source: ./en/${{ matrix.directory }}/
-      #     # ${{ github.event.repository.name }} is unavailable in scheduled actions!
-      #     destination: s3://learning-resources-dev-staging/projects/${{ github.event.repository.name }}/${{ github.sha }}/en/${{ matrix.directory }}/
-      #     aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws_region: eu-west-2
-      #     flags: --recursive
+        run: echo "Directories uploaded were ${{ steps.upload_directories.outputs.directories }}"
