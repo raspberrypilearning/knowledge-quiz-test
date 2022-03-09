@@ -1,4 +1,4 @@
-import { readdir } from "fs/promises";
+const { readdir } = require("fs/promises");
 const core = require("@actions/core");
 const github = require("@actions/github");
 
