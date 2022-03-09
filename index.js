@@ -43,6 +43,7 @@ const uploadLocaleFiles = async (files) => {
   const file = "./en/images/q1-1.png";
 
   const command = `s3 cp ./${file} s3://${path}/${file}`;
+  console.log("aws copy ", path, file, command);
   const result = await aws.command(command);
   console.log("aws copy result = ", result);
 };
