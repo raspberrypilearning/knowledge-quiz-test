@@ -2,7 +2,7 @@
   "name": "knowledge-quiz-test",
   "version": "1.0.0",
   "description": "Testing GitHub Actions by creating one in this repo",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
