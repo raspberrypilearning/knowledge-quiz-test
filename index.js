@@ -20,6 +20,7 @@ async function main() {
           // && !filter.find(fileInfo.name)) {
           list.push(fileInfo.name);
         }
+        return list;
       }, []);
       const directoryString = directories.join(", ");
       console.log(directoryString);
