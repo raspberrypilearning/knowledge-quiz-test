@@ -1,4 +1,5 @@
 const { readdir } = require("fs/promises");
+const { execSync } = require("child_process");
 // const { cwd } = require("process");
 const awsCli = require("aws-cli-js");
 const core = require("@actions/core");
@@ -32,24 +33,28 @@ const uploadLocaleFiles = async (files) => {
     context: {
       payload: {
         after: commit,
-        repository: { name: repositoryName },
+        repository: { name: repositoryName = "knowledge-quiz-test" },
       },
     },
   } = github;
 
+  // const repositoryName = "knowledge-quiz-test";
+  // const commit = "123";
   // `aws s3 cp ${FILE} s3://${path}/ \
   // --region ${process.env.AWS_REGION} $*`
   const path = `${process.env.AWS_BUCKET}/projects/${repositoryName}/${commit}`;
   const file = "en/images/q1-1.png";
 
-  const command = `s3 cp ./${file} s3://${path}/${file}`;
-  console.log("aws copy ", path, file, command);
-  const result = await aws.command(command);
-  console.log("aws copy result = ", result);
+  const command = `aws s3 cp ./${file} s3://${path}/${file}`;
+  // console.log("aws copy ", path, file, command);
+  // const result = await aws.command(command);
+  const result = execSync(command);
+  console.log("aws copy result = ", result.toString());
 };
 
 async function main() {
   try {
+    console.log("env: ", process.env);
     const filesToUpload = [];
     // const localeDirectories = await listLocaleDirectories();
     // for (let i = 0; i < localeDirectories.length; i++) {
