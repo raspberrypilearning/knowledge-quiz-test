@@ -6,9 +6,9 @@ on:
 jobs:
   Sync-image-to-S3:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        directory: [images, resources, solutions]
+    # strategy:
+    #   matrix:
+    #     directory: [images, resources, solutions]
     steps:
       # - name: Dump-github-context
       #   run: echo "$GITHUB_CONTEXT"

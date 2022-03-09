@@ -43,9 +43,8 @@ async function main() {
     const localeDirectories = await listLocaleDirectories();
     const filesToUpload = [];
     for (let i = 0; i < localeDirectories.length; i++) {
-      await listLocaleMediaFiles(localeDirectories[i]).forEach((file) =>
-        filesToUpload.push(file)
-      );
+      const mediaFiles = await listLocaleMediaFiles(localeDirectories[i]);
+      mediaFiles.forEach((file) => filesToUpload.push(file));
     }
     core.setOutput("directories", filesToUpload);
   } catch (error) {
