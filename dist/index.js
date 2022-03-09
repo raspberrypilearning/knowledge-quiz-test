@@ -8483,11 +8483,11 @@ const github = __nccwpck_require__(5438);
 async function main() {
   try {
     // `filter` input defined in action metadata file
-    const filter = core.getInput("filter");
+    const filter = core.getInput("filter").split(",");
     console.log(`Hello ${filter}!`);
     // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(github.context.payload, undefined, 2);
-    console.log(`The event payload: ${payload}`);
+    // const payload = JSON.stringify(github.context.payload, undefined, 2);
+    // console.log(`The event payload: ${payload}`);
 
     try {
       const files = await readdir("./", { withFileTypes: true });
