@@ -6,6 +6,12 @@ on:
 jobs:
   Sync-image-to-S3:
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: eu-west-2
+      AWS_BUCKET: learning-resources-dev-staging
+
     # strategy:
     #   matrix:
     #     directory: [images, resources, solutions]
@@ -21,11 +27,6 @@ jobs:
         uses: actions/checkout@v2
       - name: List directories
         uses: ./
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: eu-west-2
-          AWS_BUCKET: learning-resources-dev-staging
         id: list_directories
         with:
           filter: code,data,images,dist,.github,.git
