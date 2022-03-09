@@ -17,8 +17,7 @@ async function main() {
     try {
       const files = await readdir("./", { withFileTypes: true });
       const directories = files.reduce((list, fileInfo) => {
-        if (fileInfo.isDirectory()) {
-          // && !filter.find(fileInfo.name)) {
+        if (fileInfo.isDirectory() && filter.indexOf(fileInfo.name) !== -1) {
           list.push(fileInfo.name);
         }
         return list;
