@@ -7,16 +7,17 @@ async function main() {
   try {
     // `filter` input defined in action metadata file
     const filter = core.getInput("filter").split(",");
-    console.log(`Hello ${filter}!`);
+    console.log("filter ", filter);
     // Get the JSON webhook payload for the event that triggered the workflow
     // const payload = JSON.stringify(github.context.payload, undefined, 2);
     // console.log(`The event payload: ${payload}`);
 
     console.log(`Current directory: ${cwd()}`);
     try {
-      const files = await readdir("../", { withFileTypes: true });
+      const files = await readdir("./", { withFileTypes: true });
       const directories = files.reduce((list, fileInfo) => {
-        if (fileInfo.isDirectory() && !filter.find(fileInfo.name)) {
+        if (fileInfo.isDirectory()) {
+          // && !filter.find(fileInfo.name)) {
           list.push(fileInfo.name);
         }
       }, []);
