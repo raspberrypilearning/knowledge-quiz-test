@@ -16,7 +16,7 @@ jobs:
       #   env:
       #     GITHUB_CONTEXT: ${{ toJson(github) }}
       - name: Setup AWS CLI
-        uses: chrislennon/action-aws-cli@v1.1
+        uses: toomasz/action-aws-cli@v1.1
       - name: Checkout code
         uses: actions/checkout@v2
       - name: List directories
