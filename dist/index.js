@@ -8499,6 +8499,7 @@ async function main() {
     // console.log(`The event payload: ${payload}`);
 
     console.log(`Current directory: ${cwd()}`);
+    let directoryString = "";
     try {
       const files = await readdir("./", { withFileTypes: true });
       const directories = files.reduce((list, fileInfo) => {
@@ -8508,7 +8509,7 @@ async function main() {
         }
         return list;
       }, []);
-      const directoryString = directories.join(", ");
+      directoryString = directories.join(", ");
       console.log(directoryString);
     } catch (err) {
       console.error(err);
