@@ -21,9 +21,9 @@ jobs:
         uses: ./
         id: list_directories
         with:
-          filter: code,data,images,dist,.github
+          filter: code,data,images,dist,.github,.git
       - name: Show the directories
-        run: echo "The directories are ${{ steps.list_directories.outputs.directories }}"
+        run: echo "The locale directories are ${{ steps.list_directories.outputs.directories }}"
       # - name: Upload To S3
       #   uses: keithweaver/aws-s3-github-action@v1.0.0
       #   with:
