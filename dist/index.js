@@ -8379,6 +8379,14 @@ module.exports = require("path");
 
 /***/ }),
 
+/***/ 7282:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("process");
+
+/***/ }),
+
 /***/ 5477:
 /***/ ((module) => {
 
@@ -8477,6 +8485,7 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const { readdir } = __nccwpck_require__(3292);
+const { cwd } = __nccwpck_require__(7282);
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
 
@@ -8489,8 +8498,9 @@ async function main() {
     // const payload = JSON.stringify(github.context.payload, undefined, 2);
     // console.log(`The event payload: ${payload}`);
 
+    console.log(`Current directory: ${cwd()}`);
     try {
-      const files = await readdir("./", { withFileTypes: true });
+      const files = await readdir("../", { withFileTypes: true });
       const directories = files.reduce((list, fileInfo) => {
         if (fileInfo.isDirectory() && !filter.find(fileInfo.name)) {
           list.push(fileInfo.name);

@@ -1,4 +1,5 @@
 const { readdir } = require("fs/promises");
+const { cwd } = require("process");
 const core = require("@actions/core");
 const github = require("@actions/github");
 
@@ -11,8 +12,9 @@ async function main() {
     // const payload = JSON.stringify(github.context.payload, undefined, 2);
     // console.log(`The event payload: ${payload}`);
 
+    console.log(`Current directory: ${cwd()}`);
     try {
-      const files = await readdir("./", { withFileTypes: true });
+      const files = await readdir("../", { withFileTypes: true });
       const directories = files.reduce((list, fileInfo) => {
         if (fileInfo.isDirectory() && !filter.find(fileInfo.name)) {
           list.push(fileInfo.name);
