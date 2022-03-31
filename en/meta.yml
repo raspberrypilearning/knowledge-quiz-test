@@ -17,5 +17,5 @@ steps:
   completion: engaged
 - title: Reflection
   quiz: true
-  completion: internal
+  completion: external
 - title: What next?
