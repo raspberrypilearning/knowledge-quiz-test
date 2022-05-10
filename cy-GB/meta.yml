@@ -17,5 +17,5 @@ steps:
   completion: engaged
 - title: Myfyrio
   quiz: true
-  completion: internal
+  completion: external
 - title: Beth nesaf?
