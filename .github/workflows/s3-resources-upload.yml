@@ -22,6 +22,8 @@ jobs:
           else
              echo "::set-output name=ENV::FEATURE"
           fi
+      - name: Debug Environment
+        run: |
           echo "Setting environment to ${{ steps.env_lookup.outputs.ENV }}"
       - uses: actions/checkout@v3
         if: steps.env_lookup.outputs.ENV == 'PRODUCTION' || steps.env_lookup.outputs.ENV == 'STAGING'
