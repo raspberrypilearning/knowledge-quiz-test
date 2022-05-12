@@ -17,7 +17,7 @@ jobs:
           echo "Running on branch $BRANCH"
           if [[ "master,main" == *"$BRANCH"* ]]; then
             echo "::set-output name=ENV::PRODUCTION"
-          elif [ "$BRANCH" = "draft" ]; then
+          elif [ "$BRANCH" = "actions-test" ]; then
             echo "::set-output name=ENV::STAGING"
           else
              echo "::set-output name=ENV::FEATURE"
