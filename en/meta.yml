@@ -14,11 +14,9 @@ steps:
     version: 6
     questions: 5
     passing_score: 4
-  completion:
-  - engaged
-  - internal
 - title: Reflection
   quiz: true
 - title: What next?
   completion:
+  - internal
   - external
