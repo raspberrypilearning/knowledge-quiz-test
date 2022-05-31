@@ -14,9 +14,9 @@ steps:
     version: 6
     questions: 5
     passing_score: 4
-  completion: engaged
 - title: This is a step that had a quiz, but not now
   quiz: true
-  completion: internal
 - title: What next?
-  completion: external
+  completion:
+  - internal
+  - external
