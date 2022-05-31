@@ -1,7 +1,7 @@
 ---
 title: Knowledge Quiz Test
 hero_image: images/banner.png
-description: Quizzy Content
+description: Quizzy Content Content
 version: 0.1
 listed: false
 copyedit: false
@@ -14,11 +14,9 @@ steps:
     version: 6
     questions: 5
     passing_score: 4
-  completion:
-  - engaged
-  - internal
-- title: Reflection
+  completion: engaged
+- title: This is a step that had a quiz, but not now
   quiz: true
+  completion: internal
 - title: What next?
-  completion:
-  - external
+  completion: external
