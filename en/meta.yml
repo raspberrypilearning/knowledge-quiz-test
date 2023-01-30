@@ -4,6 +4,10 @@ hero_image: images/banner.png
 description: Quizzy Content
 meta_title: Knowledge Quiz Meta Title
 meta_description: Knowledge Quiz Meta Description
+keywords:
+- dog
+- sprite
+- scratch
 version: 0.1
 listed: false
 copyedit: false
