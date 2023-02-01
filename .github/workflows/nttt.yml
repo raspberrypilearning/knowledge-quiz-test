@@ -48,7 +48,6 @@ jobs:
           git diff --exit-code ${{ matrix.translation }}
       - name: Update Pull Request
         uses: actions/github-script@v6
-        id: git-diff
         if: github.event_name == 'pull_request'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
