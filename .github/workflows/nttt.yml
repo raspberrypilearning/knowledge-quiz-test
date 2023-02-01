@@ -1,0 +1,37 @@
+name: Run NTTT
+
+on:
+  push:
+    branches:
+      - actions-test
+  pull_request:
+    branches:
+      - actions-test
+
+jobs:
+  nttt:
+
+    runs-on: ubuntu-latest
+
+    # strategy:
+    #   matrix:
+    #     os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          repository: raspberrypilearning/nttt
+          path: nttt
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.7'
+      - name: Install dependencies
+        run: |
+          pip install -t nttt -r requirements.txt
+          pip install -t nttt . --upgrade
+      - name: Run NTTT
+        run: |
+          cd en
+          nttt
