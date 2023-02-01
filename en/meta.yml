@@ -5,24 +5,24 @@ description: Quizzy Content
 meta_title: Knowledge Quiz Meta Title
 meta_description: Knowledge Quiz Meta Description
 keywords:
-- dog
-- sprite
-- scratch
+  - dog
+  - sprite
+  - scratch
 version: 0.1
 listed: false
 copyedit: false
 last_tested: 2018-10-12
 steps:
-- title: Introduction
-- title: Test Your Knowledge
-  knowledge_quiz:
-    path: quiz1
-    version: 6
-    questions: 5
-    passing_score: 4
-- title: This is a step that had a quiz, but not now
-  quiz: true
-- title: What next?
-  completion:
-  - internal
-  - external
+  - title: Introduction
+  - title: Test Your Knowledge
+    knowledge_quiz:
+      path: quiz1
+      version: 6
+      questions: 5
+      passing_score: 4
+  - title: This is a step that had a quiz, but not now
+    quiz: true
+  - title: What next?
+    completion:
+      - internal
+      - external
