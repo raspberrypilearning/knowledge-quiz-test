@@ -67,9 +67,11 @@ jobs:
       # - name: Error if differences
       #   if: steps.git-diff.outputs.error != '0'
       #   run: exit 1
+      - name: Set commit message
+        id: commit_message_step
+        run: echo "commit_message=Updating translation ${{ matrix.translation }}" >> $GITHUB_OUTPUT
       - name: Commit changes
         if: steps.git-diff.outputs.error != '0'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Updating translation ${{ matrix.translation }}
-          file_pattern: '${{ matrix.translation }}/**'
+          commit_message: ${{ steps.commit_message_step.outputs.commit_message }}
