@@ -22,6 +22,7 @@ jobs:
     needs: translations
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         translation: ${{ fromJson(needs.translations.outputs.dirs) }}
         exclude:
@@ -41,4 +42,4 @@ jobs:
       - name: Run NTTT
         run: nttt -i ${{ matrix.translation }} -Y on
       - name: Check for changes
-        run: git diff --exit-code --quiet ${{ matrix.translation }}
+        run: git diff --exit-code ${{ matrix.translation }}
