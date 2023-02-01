@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: dirs
-        run: echo "::set-output name=dirs::$(ls -d */ | jq --raw-input --slurp --compact-output 'split("/\n")[:-1]')"
+        run: echo "dirs=$(ls -d */ | jq --raw-input --slurp --compact-output 'split("/\n")[:-1]')" >> $GITHUB_OUTPUT
 
   nttt:
     needs: translations
@@ -42,4 +42,24 @@ jobs:
       - name: Run NTTT
         run: nttt -i ${{ matrix.translation }} -Y on
       - name: Check for changes
-        run: git diff --exit-code ${{ matrix.translation }}
+        id: git-diff
+        run: |
+          echo "diff=$(git diff ${{ matrix.translation }})" >> $GITHUB_OUTPUT
+          git diff --exit-code ${{ matrix.translation }}
+      - name: Update Pull Request
+        uses: actions/github-script@v6
+        id: git-diff
+        if: github.event_name == 'pull_request'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const output = `#### NTTT Diff 🖌\`${{ steps.git-diff.outputs.diff }}\`
+
+            *Pushed by: @${{ github.actor }}\`*`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            })
