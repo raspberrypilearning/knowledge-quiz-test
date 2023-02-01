@@ -6,7 +6,9 @@ on:
       - actions-test
   pull_request:
     branches:
-      - actions-test
+      - draft
+      - master
+      - main
 
 jobs:
   translations:
