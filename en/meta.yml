@@ -20,11 +20,9 @@ steps:
     version: 6
     questions: 5
     passing_score: 4
-  completion:
-  - engaged
-  - internal
-- title: Reflection
+- title: This is a step that had a quiz, but not now
   quiz: true
 - title: What next?
   completion:
+  - internal
   - external
