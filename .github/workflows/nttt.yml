@@ -27,4 +27,4 @@ jobs:
         run: |
           pip install nttt
       - name: Run NTTT
-        run: nttt -i en -Y
+        run: nttt -i en -Y on
