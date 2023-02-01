@@ -14,8 +14,11 @@ steps:
     version: 6
     questions: 5
     passing_score: 4
-  completion: engaged
+  completion:
+  - engaged
+  - internal
 - title: Myfyrio
   quiz: true
-  completion: external
 - title: Beth nesaf?
+  completion:
+  - external

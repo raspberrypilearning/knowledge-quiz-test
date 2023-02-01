@@ -2,6 +2,12 @@
 title: Knowledge Quiz Test
 hero_image: images/banner.png
 description: Quizzy Content
+meta_title: Knowledge Quiz Meta Title
+meta_description: Knowledge Quiz Meta Description
+keywords:
+- dog
+- sprite
+- scratch
 version: 0.1
 listed: false
 copyedit: false
@@ -14,8 +20,11 @@ steps:
     version: 6
     questions: 5
     passing_score: 4
-  completion: engaged
+  completion:
+  - engaged
+  - internal
 - title: Reflection
   quiz: true
-  completion: external
 - title: What next?
+  completion:
+  - external
