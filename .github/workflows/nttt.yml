@@ -1,9 +1,9 @@
 name: Run NTTT
 
 on:
-  push:
-    branches:
-      - actions-test
+  # push:
+  #   branches:
+  #     - actions-test
   pull_request:
     branches:
       - draft
@@ -54,9 +54,9 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `#### NTTT Diff 🖌\`$(git diff ${{ matrix.translation }})\`
+            const output = `#### NTTT Diff 🖌 for `${{ matrix.translation }}` found\`
 
-            *Pushed by: @${{ github.actor }}\`*`;
+            *Pushed by: @${{ github.actor }}\*`;
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -65,5 +65,11 @@ jobs:
               body: output
             })
       - name: Error if differences
-        if: steps.git-diff.outputs.error != '0'
+        if: steps.git-diff.outputs.error != '0' & github.event_name != 'pull_request'
         run: exit 1
+      - name: Commit changes
+        if: steps.git-diff.outputs.error != '0' & github.event_name == 'pull_request'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updating translation ${{ matrix.translation }}
+          file_pattern: '${{ matrix.translation }}/**'
