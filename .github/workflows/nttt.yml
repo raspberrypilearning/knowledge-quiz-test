@@ -64,11 +64,11 @@ jobs:
               repo: context.repo.repo,
               body: output
             })
-      - name: Error if differences
-        if: steps.git-diff.outputs.error != '0' & github.event_name != 'pull_request'
-        run: exit 1
+      # - name: Error if differences
+      #   if: steps.git-diff.outputs.error != '0'
+      #   run: exit 1
       - name: Commit changes
-        if: steps.git-diff.outputs.error != '0' & github.event_name == 'pull_request'
+        if: steps.git-diff.outputs.error != '0'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Updating translation ${{ matrix.translation }}
