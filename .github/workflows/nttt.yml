@@ -45,7 +45,7 @@ jobs:
         id: git-diff
         run: |
           echo "diff=$(git diff ${{ matrix.translation }})" >> $GITHUB_OUTPUT
-          git diff --exit-code ${{ matrix.translation }}
+          echo "error=$(git diff --exit-code --quiet ${{ matrix.translation }})" >> $GITHUB_OUTPUT
       - name: Update Pull Request
         uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
@@ -62,3 +62,6 @@ jobs:
               repo: context.repo.repo,
               body: output
             })
+      - name: Error if differences
+        if: steps.git-diff.outputs.error != '0'
+        run: exit 1
