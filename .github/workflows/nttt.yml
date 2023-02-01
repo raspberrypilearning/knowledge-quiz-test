@@ -48,22 +48,22 @@ jobs:
         run: |
           git diff ${{ matrix.translation }}
           echo "error=$(git diff --exit-code --quiet ${{ matrix.translation }})" >> $GITHUB_OUTPUT
-      - name: Update Pull Request
-        uses: actions/github-script@v6
-        if: github.event_name == 'pull_request'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const output = `#### NTTT Diff 🖌 for `${{ matrix.translation }}` found\`
+      # - name: Update Pull Request
+      #   uses: actions/github-script@v6
+      #   if: github.event_name == 'pull_request'
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     script: |
+      #       const output = `#### NTTT Diff 🖌 for `${{ matrix.translation }}` found\`
 
-            *Pushed by: @${{ github.actor }}\*`;
+      #       *Pushed by: @${{ github.actor }}\*`;
 
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: output
-            })
+      #       github.rest.issues.createComment({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         body: output
+      #       })
       # - name: Error if differences
       #   if: steps.git-diff.outputs.error != '0'
       #   run: exit 1
