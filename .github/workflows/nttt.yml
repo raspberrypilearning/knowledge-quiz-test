@@ -44,7 +44,7 @@ jobs:
       - name: Check for changes
         id: git-diff
         run: |
-          echo "diff=$(git diff ${{ matrix.translation }})" >> $GITHUB_OUTPUT
+          git diff ${{ matrix.translation }}
           echo "error=$(git diff --exit-code --quiet ${{ matrix.translation }})" >> $GITHUB_OUTPUT
       - name: Update Pull Request
         uses: actions/github-script@v6
@@ -52,7 +52,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `#### NTTT Diff 🖌\`${{ steps.git-diff.outputs.diff }}\`
+            const output = `#### NTTT Diff 🖌\`$(git diff ${{ matrix.translation }})\`
 
             *Pushed by: @${{ github.actor }}\`*`;
 
