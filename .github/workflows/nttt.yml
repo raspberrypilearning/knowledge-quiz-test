@@ -19,18 +19,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/checkout@v3
-        with:
-          repository: raspberrypilearning/nttt
-          path: nttt
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
         with:
           python-version: '3.10'
       - name: Install dependencies
         run: |
-          pip install -t nttt -r nttt/requirements.txt
-          pip install ./nttt --upgrade
+          pip install nttt
       - name: Run NTTT
         run: |
           cd en
