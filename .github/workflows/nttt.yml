@@ -29,7 +29,7 @@ jobs:
           python-version: '3.7'
       - name: Install dependencies
         run: |
-          pip install -t nttt -r requirements.txt
+          pip install -t nttt -r nttt/requirements.txt
           pip install -t nttt . --upgrade
       - name: Run NTTT
         run: |
