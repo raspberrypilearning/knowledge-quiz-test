@@ -1,7 +1,7 @@
 # knowledge-quiz-test
 
 ## Live quiz examples
-Find the live quiz examples at [https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test/1](https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test/1)
+Find the live quiz examples at https://staging-projects.raspberrypi.org/en/projects/knowledge-quiz-test
 
 See how these quiz questions were constructed by checking the files in [en/quiz1/](en/quiz1/) in this project.
 
@@ -57,4 +57,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
  See [LICENCE.md](LICENCE.md)
 
 ## Note
-Find the project online at [https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test](https://staging--rpf-projects-1e21fd.netlify.app/en/projects/knowledge-quiz-test)
+Find the project online at https://staging-projects.raspberrypi.org/en/projects/knowledge-quiz-test
