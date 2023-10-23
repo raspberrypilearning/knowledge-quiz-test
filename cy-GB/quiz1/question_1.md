@@ -2,7 +2,7 @@
 
 Gall y cwis fod â HTML arferol o'i flaen, a fydd yn cael ei drin fel marcio arferol yn unig.
 
-Bydd unrhyw beth y tu mewn i floc `---question---` yn cael ei rannu'n `<form>` sy'n cynrychioli cwestiwn y cwis
+Bydd unrhyw beth y tu mewn i floc `--- question ---` yn cael ei rannu'n `<form>` sy'n cynrychioli cwestiwn y cwis
 
 Yn ddewisol, gall cwestiwn fod ag adran 'frontmatter' gyda'r paramedr `legend` i ddiystyru'r llinyn 'Question' rhagosodedig a ddefnyddir yn nha chwedl y ffurflen.
 

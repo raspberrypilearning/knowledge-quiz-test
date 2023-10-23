@@ -7,16 +7,16 @@ listed: false
 copyedit: false
 last_tested: 2018-10-12
 steps:
-- title: Cyflwyniad
-- title: Profwch eich gwybodaeth
-  knowledge_quiz:
-    path: quiz1
-    version: 6
-    questions: 5
-    passing_score: 4
-- title: Myfyrio
-  quiz: true
-- title: Beth nesaf?
-  completion:
-  - internal
-  - external
+  - title: Cyflwyniad
+  - title: Profwch eich gwybodaeth
+    knowledge_quiz:
+      path: quiz1
+      version: 6
+      questions: 5
+      passing_score: 4
+  - title: Myfyrio
+    quiz: true
+  - title: Beth nesaf?
+    completion:
+      - internal
+      - external

@@ -25,7 +25,7 @@ Hefyd yn profi blociau mewn adborth a blociau eang mewn atebion ...
   --- /feedback ---
 
 - ( )
-  `Dewiswch rif ar hap`{:class="block3operators"} rhwng `1` a `hyd rhestr y berfau`{:class=" block3variables"}:
+  `Dewiswch rif ar hap`{:class="block3operators"} rhwng `1` a `hyd rhestr y berfau`{:class="block3variables"}:
   ```blocks3
   (uno [Rydw i'n] (eitem (ar hap v) o [berfau v] :: list)
   ```

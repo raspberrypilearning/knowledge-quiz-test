@@ -1,0 +1,77 @@
+name: Run NTTT
+
+on:
+  # push:
+  #   branches:
+  #     - actions-test
+  pull_request:
+    branches:
+      - draft
+      - master
+      - main
+
+jobs:
+  translations:
+    runs-on: ubuntu-latest
+    outputs:
+      dirs: ${{ steps.dirs.outputs.dirs }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: dirs
+        run: echo "dirs=$(ls -d */ | jq --raw-input --slurp --compact-output 'split("/\n")[:-1]')" >> $GITHUB_OUTPUT
+
+  nttt:
+    needs: translations
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        translation: ${{ fromJson(needs.translations.outputs.dirs) }}
+        exclude:
+          - translation: images
+          - translation: solutions
+          - translation: resources
+          - translation: .github
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install nttt
+      - name: Run NTTT
+        run: nttt -i ${{ matrix.translation }} -Y on
+      - name: Check for changes
+        id: git-diff
+        run: |
+          git diff ${{ matrix.translation }}
+          echo "error=$(git diff --exit-code --quiet ${{ matrix.translation }})" >> $GITHUB_OUTPUT
+      # - name: Update Pull Request
+      #   uses: actions/github-script@v6
+      #   if: github.event_name == 'pull_request'
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     script: |
+      #       const output = `#### NTTT Diff 🖌 for `${{ matrix.translation }}` found\`
+
+      #       *Pushed by: @${{ github.actor }}\*`;
+
+      #       github.rest.issues.createComment({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         body: output
+      #       })
+      # - name: Error if differences
+      #   if: steps.git-diff.outputs.error != '0'
+      #   run: exit 1
+      - name: Set commit message
+        id: commit_message_step
+        run: echo "commit_message=Updating translation ${{ matrix.translation }}" >> $GITHUB_OUTPUT
+      - name: Commit changes
+        if: steps.git-diff.outputs.error != '0'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: ${{ steps.commit_message_step.outputs.commit_message }}
